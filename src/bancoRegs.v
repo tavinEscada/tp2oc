@@ -7,7 +7,7 @@ module bancoRegs(
     wd, 
     rd1, 
     rd2
-    );
+);
 
     input wire clk;
     input wire rw;

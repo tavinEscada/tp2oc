@@ -5,7 +5,7 @@ module memoriaDados(
     endereco,
     wd,
     rd
-    );
+);
 
 input wire clk;
 input wire memwrite;
