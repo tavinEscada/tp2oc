@@ -5,7 +5,7 @@ module ula(
     aluResult, 
     zero, 
     clk
-    );
+);
 
     input clk;
     input [31:0] data1;
@@ -17,22 +17,22 @@ module ula(
     always @(*) begin
         case(aluControl)
 
-            4'b0010: begin          //ADD → add, addi, lw, sw
+            4'b0010: begin          //ADD add, addi, lw, sw
                 aluResult <= data1 + data2;
                 zero <= 0;
             end
 
-            4'b0011: begin          //XOR → xor
+            4'b0011: begin          //xor
                 aluResult <= data1 ^ data2;
                 zero <= 0;
             end
 
-            4'b0101: begin          //SLL → sll
+            4'b0101: begin          //sll
                 aluResult <= data1 << data2[4:0]; //só 5 bits de deslocamento
                 zero <= 0;
             end
 
-            4'b0110: begin          //SUB → bne (comparação)
+            4'b0110: begin          //bne (comparação)
                 aluResult <= data1 - data2;
                 if ((data1 - data2) == 32'b0)
                     zero <= 1;

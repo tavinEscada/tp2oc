@@ -3,7 +3,7 @@ module pc(
     reset, 
     entrada,
     saida
-    );
+);
 
     input wire reset, clock;
     input wire [31:0] entrada;
