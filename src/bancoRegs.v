@@ -19,6 +19,13 @@ module bancoRegs(
     output reg[31:0] rd2;
     reg [31:0] registradores [0:31];
 
+    initial begin
+    registradores[0] = 32'd0;   // x0 = 0
+    registradores[1] = 32'd5;   // x1 = 5
+    registradores[2] = 32'd3;   // x2 = 3
+    //
+end
+
     always @(registradores[0]) begin
         registradores[0] <= 0;
     end
